@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing Cards</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: #f1f5f9;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            margin: 30px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 25px;
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px #aaa;
+        }
+
+        .pro {
+            border: 2px solid #0284c7;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px #38bdf8;
+            }
+
+            to {
+                box-shadow: 0 0 20px #0284c7;
+            }
+        }
+
+        button {
+            padding: 12px;
+            background: #0284c7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(0.96);
+        }
+
+        @media (min-width: 850px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Pricing Plans</h1>
+
+    <div class="toggle">
+        <span>Monthly</span>
+        <span>Annual</span>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Starter</h2>
+            <h1>Free</h1>
+            <p>Basic Features</p>
+            <p>Limited Access</p>
+            <button>Select</button>
+        </div>
+
+        <div class="card pro">
+            <h2>Pro Plan ⭐</h2>
+            <h1>₹799/mo</h1>
+            <p>All Basic Features</p>
+            <p>Unlimited Access</p>
+            <p>Priority Support</p>
+            <button>Select</button>
+        </div>
+
+        <div class="card">
+            <h2>Team</h2>
+            <h1>₹1,999</h1>
+            <p>All Pro Features</p>
+            <p>Team Collaboration</p>
+            <p>Advanced Support</p>
+            <button>Select</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

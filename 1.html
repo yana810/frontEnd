@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Card</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: #f1f5f9;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 700px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .image {
+            background: #dbeafe;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.04);
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .top, .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .features span {
+            background: #dbeafe;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #0284c7;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(0.96);
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 767px) {
+            button {
+                width: 100%;
+            }
+
+            .bottom {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="image">
+            Product Image
+        </div>
+
+        <div class="details">
+
+            <div class="top">
+                <span>Category</span>
+                <span>⭐ 4.9</span>
+            </div>
+
+            <h2>Desk Workspace Mat</h2>
+
+            <div class="features">
+                <span>Waterproof</span>
+                <span>Durable</span>
+                <span>Premium</span>
+            </div>
+
+            <div class="bottom">
+                <div>
+                    <h3>₹1,499</h3>
+                    <small>Tax included</small>
+                </div>
+
+                <button>Add to Bag</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
